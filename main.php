@@ -7,9 +7,9 @@ $scopes = ['backend'];
 
 $client = new \Fusio\Sdk\Client('https://demo.fusio-project.org', 'test', 'FRsNh1zKCXlB', $scopes, $tokenStore);
 
-$collection = $client->backend()->backendRoute()->getBackendRoutes()->backendActionRouteGetAll();
+$collection = $client->backend()->operation()->getAll(0, 16, '');
 
-echo 'Routes:' . "\n";
-foreach ($collection->getEntry() as $route) {
-    echo '* ' . $route->getPath() . "\n";
+echo 'Operations:' . "\n";
+foreach ($collection->getEntry() as $operation) {
+    echo '* ' . $operation->getHttpMethod() . ' ' . $operation->getHttpPath() . "\n";
 }

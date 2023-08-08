@@ -1,5 +1,5 @@
 {
     "require": {
-        "fusio/sdk": "^2.1"
+        "fusio/sdk": "^3.0"
     }
 }
